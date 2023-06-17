@@ -52,6 +52,7 @@
       "Tests\\": "tests/"
     }
   },
+  "bin": "src/wp-link",
   "scripts": {
     "analyze": "vendor/bin/phpstan analyze",
     "check": "vendor/bin/phpcs",
