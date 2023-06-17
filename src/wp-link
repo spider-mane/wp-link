@@ -1,0 +1,21 @@
+#!/usr/bin/env php
+<?php
+
+use WebTheory\WpLink\WpLink;
+
+if ($argc < 2) {
+  echo "Must provide name to give symlink.\n";
+  exit(1);
+}
+
+$root = getcwd();
+
+require_once $_composer_autoload_path ?? "{$root}/vendor/autoload.php";
+
+$composer = json_decode(file_get_contents($root . '/composer.json'), true);
+$name = $argv[1];
+$type = $composer['type'] ?? 'wordpress-plugin';
+
+$linker = new WpLink($root);
+
+$linker->makeLink($name, $type);

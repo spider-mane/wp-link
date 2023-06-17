@@ -1,0 +1,5 @@
+path: wordpress
+color: true
+core download:
+  locale: en_US
+  version: latest
