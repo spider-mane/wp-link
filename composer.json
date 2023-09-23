@@ -93,14 +93,14 @@
   "extra": {
     "build-paths": {
       "build": {
-        "php-cs-fixer": [],
-        "phpstan": [],
-        "phpunit": [],
-        "psalm": []
+        "php-cs-fixer": {},
+        "phpstan": {},
+        "phpunit": {},
+        "psalm": {}
       },
-      "cache": [],
-      "logs": [],
-      "temp": []
+      "cache": {},
+      "logs": {},
+      "temp": {}
     },
     "playground": {
       "contexts": [],

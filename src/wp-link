@@ -14,7 +14,8 @@ require_once $_composer_autoload_path ?? "{$root}/vendor/autoload.php";
 
 $composer = json_decode(file_get_contents($root . '/composer.json'), true);
 $name = $argv[1];
-$type = $composer['type'] ?? 'wordpress-plugin';
+$type = $argv[2] ? 'wordpress-' . $argv[2] : null;
+$type = $type ?? $composer['type'] ?? 'wordpress-plugin';
 
 $linker = new WpLink($root);
 
